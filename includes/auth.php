@@ -23,7 +23,7 @@ if (isset($_POST['login'])) {
 
     // verifies if the user exists
     // verifies if the password matches that of the specific user password
-    if ($user && password_verify($password, $user['password'])) {
+    if ($user && password_verify($password, $user['password_hash'])) {
         // stores session data for the logged-in user
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['role'] = $user['role'];
