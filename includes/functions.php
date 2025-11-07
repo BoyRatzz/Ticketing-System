@@ -12,7 +12,7 @@ function require_login() {
     }
 }
 
-function issuper_user() {
+function is_superuser() {
     return (isset($_SESSION['user_id']) && $_SESSION['role'] == 'superuser' && isset($_SESSION['role']));
 }
 ?>

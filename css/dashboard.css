@@ -1,0 +1,27 @@
+.container {
+  height: 100vh;
+  width: auto;
+  display: flex;
+}
+
+.sidebar {
+  flex: 1;
+  background-color: firebrick;
+}
+
+.subcontainer {
+  display: flex;
+  flex-direction: column;
+  flex: 4;
+  background-color: aqua;
+}
+
+.navbar {
+  flex: 1;
+  background-color: teal;
+}
+
+.ticket-container {
+  flex: 10;
+  background-color: hotpink;
+}
