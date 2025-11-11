@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto';
+}
+
 .container {
   height: 100vh;
   width: auto;
@@ -5,23 +12,131 @@
 }
 
 .sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  background-color: #444444;
+  align-items: center;
+  padding-top: 15px;
+}
+
+.sidebar-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
   flex: 1;
-  background-color: firebrick;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.sidebar-content div:hover {
+  background-color: #dddddd;
+}
+
+.sidebar-content-createaccounts {
+  display: flex;
+  width: 300px;
+  background-color: #ffffffee;
+  padding: 7px;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.sidebar-content-tickets {
+  display: flex;
+  width: 300px;
+  background-color: #ffffffee;
+  padding: 7px;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .subcontainer {
   display: flex;
+  flex: 1;
   flex-direction: column;
-  flex: 4;
-  background-color: aqua;
 }
 
 .navbar {
-  flex: 1;
-  background-color: teal;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  background-color: #000000;
+  color: white;
 }
 
 .ticket-container {
-  flex: 10;
-  background-color: hotpink;
+  flex: 1;
+  background-color: whitesmoke;
+}
+
+.ticket-container-header {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.ticket-container-subheader {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 75px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.btn-ticket-div {
+  margin-left: 20px;
+}
+
+.btn-ticket {
+  font-size: 16px;
+  padding: 5px 10px 5px 10px;
+}
+
+.ticket-div {
+  margin: 20px 20px 0 20px;
+}
+
+.tickets-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0px;
+  font-size: 16px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tickets-table thead {
+  background-color: #2d2d2d;
+  color: white;
+}
+
+.tickets-table th,
+.tickets-table td {
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+}
+
+.tickets-table td {
+  text-align: center;
+}
+
+/* Alternate row color for readability */
+.tickets-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Hover effect */
+.tickets-table tbody tr:hover {
+  background-color: #f1f1f1;
 }
