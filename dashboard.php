@@ -117,25 +117,30 @@ $tickets = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </div>
 
     <!-- Add Ticket Modal -->
-    <div class="modal">
+    <div id="addTicketModal" class="modal">
         <div class="modal-content">
-            <span class="close-button">$times;</span>
+            <span class="close-button">&times;</span>
             <h2>Add Ticket</h2>
-            <form action="">
-                <label for="">Title:</label>
-                <input type="text">
-                <label for="">Description:</label>
-                <input type="text">
-                <label for="">Recipient:</label>
-                <select name="" id="">
-                    <option value="">General (anyone)</option>
-                    <option value="">Specific (assign to user)</option>
+            <form id="addTicketForm" action="includes/add_ticket.php" method="POST" class="addTicketForm">
+                <label for="title">Title:</label>
+                <input type="text" name="title" id="title">
+
+                <label for="description">Description:</label>
+                <textarea name="description" id="description"></textarea>
+
+                <label for="recipient_type">Recipient:</label>
+                <select name="recipient_type" id="recipient_type">
+                    <option value="general">General (anyone)</option>
+                    <option value="specific">Specific (assign to user)</option>
                 </select>
-                <label for="">Assign to User:</label>
-                <input type="text" name="" id="">
+                
+                <label for="assigned_to" id="assignedLabel" style="display: none;">Assign to User:</label>
+                <input type="number" name="assigned_to" id="assigned_to" placeholder="User ID" style="display: none">
+
                 <button>Add Ticket</button>
             </form>
         </div>
     </div>
 </body>
+<script src="ticket.js"></script>
 </html>
