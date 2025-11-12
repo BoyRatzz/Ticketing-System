@@ -64,11 +64,11 @@ window.addEventListener("click", function (e) {
 });
 
 const searchAccount = document.getElementById("searchAccount");
-const table = document.querySelector(".accounts-table tbody");
+const tableAccount = document.querySelector(".accounts-table tbody");
 
 searchAccount.addEventListener("input", function () {
   const filter = this.value.toLowerCase();
-  const rows = table.querySelectorAll("tr");
+  const rows = tableAccount.querySelectorAll("tr");
 
   rows.forEach((row) => {
     const descriptionCell = row.cells[1];

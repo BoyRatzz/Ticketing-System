@@ -4,16 +4,16 @@ const openBtn = document.querySelector(".btn-ticket");
 const closeBtn = document.querySelector(".close-button");
 
 openBtn.addEventListener("click", () => {
-  modal.style.display = "block";
+  modal.classList.add('show');
 });
 
 closeBtn.addEventListener("click", () => {
-  modal.style.display = "none";
+  modal.classList.remove('show');
 });
 
 window.addEventListener("click", (e) => {
   if (e.target === modal) {
-    modal.style.display = "none";
+    modal.classList.remove('show');
   }
 });
 
@@ -88,7 +88,7 @@ searchInput.addEventListener("input", function () {
     const descriptionCell = row.cells[2];
     const descriptionText = descriptionCell.textContent.toLowerCase();
     if (descriptionText.includes(filter)) {
-      row.style.display = "block"; // show
+      row.style.display = ""; // show
     } else {
       row.style.display = "none"; // hide
     }

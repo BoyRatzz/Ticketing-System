@@ -270,6 +270,7 @@ $users = $userQuery->fetchAll(PDO::FETCH_ASSOC);
         <div class="modal-content">
             <span class="close-button">&times;</span>
             <h2>Add Ticket</h2>
+            <br>
             <form id="addTicketForm" action="includes/add_ticket.php" method="POST" class="addTicketForm">
                 <label for="title">Title:</label>
                 <input type="text" name="title" id="title" required>
